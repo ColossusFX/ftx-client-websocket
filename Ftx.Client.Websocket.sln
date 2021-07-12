@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ftx.Client.Websocket", "src\Ftx.Client.Websocket\Ftx.Client.Websocket.csproj", "{F115C55B-500D-4CBA-A0DD-D5F07DCD4CE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3D3395F8-A159-4C6A-8A87-0E9E46D09526}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{35A675DE-71A3-40A1-AD91-5AEF24207D1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test_integration", "test_integration", "{1CF5D79E-43F4-4081-B412-428D897183DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ftx.Client.Websocket.Sample", "test_integration\Ftx.Client.Websocket.Sample\Ftx.Client.Websocket.Sample.csproj", "{58CAD869-DD86-4A19-824A-703C6E71C73E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F115C55B-500D-4CBA-A0DD-D5F07DCD4CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F115C55B-500D-4CBA-A0DD-D5F07DCD4CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F115C55B-500D-4CBA-A0DD-D5F07DCD4CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F115C55B-500D-4CBA-A0DD-D5F07DCD4CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CAD869-DD86-4A19-824A-703C6E71C73E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CAD869-DD86-4A19-824A-703C6E71C73E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CAD869-DD86-4A19-824A-703C6E71C73E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CAD869-DD86-4A19-824A-703C6E71C73E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F115C55B-500D-4CBA-A0DD-D5F07DCD4CE9} = {3D3395F8-A159-4C6A-8A87-0E9E46D09526}
+		{58CAD869-DD86-4A19-824A-703C6E71C73E} = {1CF5D79E-43F4-4081-B412-428D897183DB}
+	EndGlobalSection
+EndGlobal
