@@ -1,4 +1,5 @@
 ﻿using System;
+using Ftx.Client.Websocket.Responses.Trades;
 
 namespace Ftx.Client.Websocket.Responses.Orders
 {
@@ -7,11 +8,11 @@ namespace Ftx.Client.Websocket.Responses.Orders
         public long Id { get; set; }
         public string ClientId { get; set; }
         public string Market { get; set; }
-        public string Type { get; set; }
-        public string Side { get; set; }
+        public OrderType Type { get; set; }
+        public TradeSide Side { get; set; }
         public double? Price { get; set; }
         public long? Size { get; set; }
-        public string Status { get; set; }
+        public OrderStatus Status { get; set; }
         public long? FilledSize { get; set; }
         public long? RemainingSize { get; set; }
         public bool ReduceOnly { get; set; }
