@@ -1,4 +1,5 @@
 ﻿using System;
+using Ftx.Client.Websocket.Responses.Orders;
 
 namespace Ftx.Client.Websocket.Responses.Fills
 {
@@ -9,7 +10,7 @@ namespace Ftx.Client.Websocket.Responses.Fills
         public string Future { get; set; }
         public string BaseCurrency { get; set; }
         public string QuoteCurrency { get; set; }
-        public string Type { get; set; }
+        public OrderType Type { get; set; }
         public FtxSide Side { get; set; }
         public double? Price { get; set; }
         public long? Size { get; set; }

@@ -9,7 +9,7 @@ namespace Ftx.Client.Websocket.Responses.Orders
         public string ClientId { get; set; }
         public string Market { get; set; }
         public OrderType Type { get; set; }
-        public TradeSide Side { get; set; }
+        public FtxSide Side { get; set; }
         public double? Price { get; set; }
         public long? Size { get; set; }
         public OrderStatus Status { get; set; }
