@@ -81,9 +81,9 @@ namespace Ftx.Client.Websocket.Client
         /// </summary>
         /// <param name="apiKey">Your API key</param>
         /// <param name="apiSecret">Your API secret</param>
-        public void Authenticate(string apiKey, string apiSecret)
+        public void Authenticate(string apiKey, string apiSecret, string subAccount)
         {
-            Send(new AuthenticationRequest(apiKey, apiSecret));
+            Send(new AuthenticationRequest(apiKey, apiSecret, subAccount));
         }
 
         private string L(string msg)

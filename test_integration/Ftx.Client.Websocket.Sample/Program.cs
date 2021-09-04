@@ -75,7 +75,7 @@ namespace Ftx.Client.Websocket.Sample
 
         private static async Task SendSubscriptionRequests(FtxWebsocketClient client)
         {
-            client.Send(new AuthenticationRequest(API_KEY, API_SECRET));
+            client.Send(new AuthenticationRequest(API_KEY, API_SECRET, null));
             client.Send(new TickerSubscribeRequest("BTC-PERP"));
             client.Send(new TradesSubscribeRequest("BTC-PERP"));
             client.Send(new TradesSubscribeRequest("ETH-PERP"));

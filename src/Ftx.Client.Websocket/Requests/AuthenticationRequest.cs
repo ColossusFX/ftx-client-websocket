@@ -11,14 +11,16 @@ namespace Ftx.Client.Websocket.Requests
         private readonly string _apiKey;
         private readonly string _authSig;
         private readonly long _authNonce;
+        private readonly string _subAccount;
 
-        public AuthenticationRequest(string apiKey, string apiSecret)
+        public AuthenticationRequest(string apiKey, string apiSecret, string subAccount)
         {
             FtxValidations.ValidateInput(apiKey, nameof(apiKey));
             FtxValidations.ValidateInput(apiSecret, nameof(apiSecret));
 
             _apiKey = apiKey;
             _authNonce = FtxAuthentication.CreateAuthNonce();
+            _subAccount = subAccount;
             
             var authPayload = FtxAuthentication.CreateAuthPayload(_authNonce);
             
@@ -32,7 +34,8 @@ namespace Ftx.Client.Websocket.Requests
         {
             Key = _apiKey,
             Sign = _authSig,
-            Time = _authNonce
+            Time = _authNonce,
+            SubAccount = _subAccount
         };
     }
     
@@ -46,5 +49,10 @@ namespace Ftx.Client.Websocket.Requests
 
         [JsonProperty("time")]
         public long Time { get; set; }
+        
+        [JsonProperty("subaccount")]
+        public string SubAccount { get; set; }
+
+        
     }
 }
