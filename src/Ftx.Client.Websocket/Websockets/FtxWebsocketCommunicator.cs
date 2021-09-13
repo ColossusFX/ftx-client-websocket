@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Net.WebSockets;
 using Ftx.Client.Websocket.Communicator;
 using Websocket.Client;
