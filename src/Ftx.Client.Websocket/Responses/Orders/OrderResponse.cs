@@ -11,10 +11,10 @@ namespace Ftx.Client.Websocket.Responses.Orders
         public OrderType Type { get; set; }
         public FtxSide Side { get; set; }
         public double? Price { get; set; }
-        public long? Size { get; set; }
+        public double? Size { get; set; }
         public OrderStatus Status { get; set; }
-        public long? FilledSize { get; set; }
-        public long? RemainingSize { get; set; }
+        public double? FilledSize { get; set; }
+        public double? RemainingSize { get; set; }
         public bool ReduceOnly { get; set; }
         public bool Liquidation { get; set; }
         public double? AvgFillPrice { get; set; }
