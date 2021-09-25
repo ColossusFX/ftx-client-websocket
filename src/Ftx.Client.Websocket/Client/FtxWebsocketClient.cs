@@ -88,7 +88,7 @@ namespace Ftx.Client.Websocket.Client
 
         private string L(string msg)
         {
-            return $"[BMX WEBSOCKET CLIENT] {msg}";
+            return $"[FTX WEBSOCKET CLIENT] {msg}";
         }
 
         private void HandleMessage(ResponseMessage message)

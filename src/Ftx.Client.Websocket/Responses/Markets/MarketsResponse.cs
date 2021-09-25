@@ -13,8 +13,6 @@ namespace Ftx.Client.Websocket.Responses.Markets
 
         internal static bool TryHandle(string response, ISubject<MarketsResponse> subject)
         {
-            // if (!FtxJsonSerializer.ContainsValue(response, "partial") ||
-            //     !FtxJsonSerializer.ContainsValue(response, "markets"))
             if (!FtxJsonSerializer.ContainsValue(response, "markets"))
                 return false;
 
