@@ -11,21 +11,18 @@ namespace Ftx.Client.Websocket.Responses.Orders
     public enum OrderType
     {
         Undefined,
-        [EnumMember(Value = "limit")]
-        Limit,
-        [EnumMember(Value = "market")]
-        Market,
-        [EnumMember(Value = "stop")]
-        Stop,
-        [EnumMember(Value = "trailingStop")]
-        TrailingStop,
-        [EnumMember(Value = "fok")]
-        Fok,
-        [EnumMember(Value = "stopLimit")]
-        StopLimit,
+        [EnumMember(Value = "limit")] Limit,
+        [EnumMember(Value = "market")] Market,
+        [EnumMember(Value = "stop")] Stop,
+        [EnumMember(Value = "trailingStop")] TrailingStop,
+        [EnumMember(Value = "fok")] Fok,
+        [EnumMember(Value = "stopLimit")] StopLimit,
+
         [EnumMember(Value = "takeProfitLimit")]
         TakeProfitLimit,
+
         [EnumMember(Value = "takeProfitMarket")]
-        TakeProfitMarket
+        TakeProfitMarket,
+        Order
     }
 }

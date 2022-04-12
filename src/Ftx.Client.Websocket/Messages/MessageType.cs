@@ -17,6 +17,7 @@ namespace Ftx.Client.Websocket.Messages
         [DataMember(Name = "fills")] Fills,
         [DataMember(Name = "orders")] Orders,
         [DataMember(Name = "orderbook")] OrderBook,
+        [DataMember(Name = "orderbookGrouped")] OrderBookGrouped,
         [DataMember(Name = "ticker")] Ticker,
         [DataMember(Name = "trades")] Trades,
         [DataMember(Name = "partial")] Partial,

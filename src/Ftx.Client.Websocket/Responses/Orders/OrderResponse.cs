@@ -5,7 +5,7 @@ namespace Ftx.Client.Websocket.Responses.Orders
 {
     public class OrderResponse
     {
-        public long Id { get; set; }
+        public long? Id { get; set; }
         public string ClientId { get; set; }
         public string Market { get; set; }
         public OrderType Type { get; set; }
@@ -15,11 +15,11 @@ namespace Ftx.Client.Websocket.Responses.Orders
         public OrderStatus Status { get; set; }
         public double? FilledSize { get; set; }
         public double? RemainingSize { get; set; }
-        public bool ReduceOnly { get; set; }
-        public bool Liquidation { get; set; }
+        public bool? ReduceOnly { get; set; }
+        public bool? Liquidation { get; set; }
         public double? AvgFillPrice { get; set; }
-        public bool PostOnly { get; set; }
-        public bool Ioc { get; set; }
+        public bool? PostOnly { get; set; }
+        public bool? Ioc { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
     }
 }

@@ -75,15 +75,16 @@ namespace Ftx.Client.Websocket.Sample
 
         private static async Task SendSubscriptionRequests(FtxWebsocketClient client)
         {
-            client.Send(new AuthenticationRequest(API_KEY, API_SECRET, null));
-            client.Send(new TickerSubscribeRequest("BTC-PERP"));
-            client.Send(new TradesSubscribeRequest("BTC-PERP"));
-            client.Send(new TradesSubscribeRequest("ETH-PERP"));
-            client.Send(new TradesSubscribeRequest("DOT-PERP"));
-            client.Send(new OrdersSubscribeRequest());
-            client.Send(new FillsSubscribeRequest());
-            client.Send(new MarketsSubscribeRequest());
-            client.Send(new BookSubscribeRequest("BTC-PERP"));
+            // client.Send(new AuthenticationRequest(API_KEY, API_SECRET, null));
+            // client.Send(new TickerSubscribeRequest("BTC-PERP"));
+            // client.Send(new TradesSubscribeRequest("BTC-PERP"));
+            // client.Send(new TradesSubscribeRequest("ETH-PERP"));
+            // client.Send(new TradesSubscribeRequest("DOT-PERP"));
+            // client.Send(new OrdersSubscribeRequest());
+            // client.Send(new FillsSubscribeRequest());
+            // client.Send(new MarketsSubscribeRequest());
+            // client.Send(new BookSubscribeRequest("BTC-PERP"));
+            client.Send(new GroupedBookSubscribeRequest("SPELL-PERP", 0.0005));
         }
 
         private static void SubscribeToStreams(FtxWebsocketClient client)
@@ -128,6 +129,15 @@ namespace Ftx.Client.Websocket.Sample
 
                 ob.Data.Bids.ToList().ForEach(x =>
                     Log.Information($"Book update {ob.Market} [{x.Side}] {x.Price}:{x.Amount}"));
+            });
+            
+            client.Streams.GroupedOrderBookUpdateStream.Subscribe(ob =>
+            {
+                ob.Data.Asks.ToList().ForEach(x =>
+                    Log.Information($"Book update {ob.Market} [{x.Side}] {x.Price}:{x.Amount} Grouping:{ob.Grouping}"));
+
+                ob.Data.Bids.ToList().ForEach(x =>
+                    Log.Information($"Book update {ob.Market} [{x.Side}] {x.Price}:{x.Amount} Grouping:{ob.Grouping}"));
             });
 
             client.Streams.OrderBookUpdateStream.Subscribe(ob =>

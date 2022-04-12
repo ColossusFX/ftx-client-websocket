@@ -22,6 +22,12 @@ namespace Ftx.Client.Websocket.Client
 
         internal readonly Subject<OrderBookUpdateResponse> OrderBookUpdateSubject =
             new Subject<OrderBookUpdateResponse>();
+        
+        internal readonly Subject<GroupedOrderBookSnapshotResponse> GroupedOrderBookSnapshotSubject =
+            new Subject<GroupedOrderBookSnapshotResponse>();
+
+        internal readonly Subject<GroupedOrderBookUpdateResponse> GroupedOrderBookUpdateSubject =
+            new Subject<GroupedOrderBookUpdateResponse>();
 
         internal readonly Subject<MarketsResponse> MarketsSubject = new Subject<MarketsResponse>();
 
@@ -60,6 +66,8 @@ namespace Ftx.Client.Websocket.Client
             OrderBookSnapshotSubject.AsObservable();
 
         public IObservable<OrderBookUpdateResponse> OrderBookUpdateStream => OrderBookUpdateSubject.AsObservable();
+        
+        public IObservable<GroupedOrderBookUpdateResponse> GroupedOrderBookUpdateStream => GroupedOrderBookUpdateSubject.AsObservable();
 
         /// <summary>
         /// Stream of all Trade-able Contracts, Indices, and History

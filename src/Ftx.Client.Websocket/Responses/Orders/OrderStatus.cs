@@ -5,6 +5,8 @@
         Undefined,
         New,
         Open,
-        Closed
+        Closed,
+        Canceled,
+        Filled
     }
 }

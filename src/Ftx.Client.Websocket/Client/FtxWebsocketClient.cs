@@ -141,6 +141,8 @@ namespace Ftx.Client.Websocket.Client
                 TickerResponse.TryHandle(msg, Streams.TickerSubject) ||
                 OrderBookUpdateResponse.TryHandle(msg, Streams.OrderBookUpdateSubject, "update") ||
                 OrderBookSnapshotResponse.TryHandle(msg, Streams.OrderBookSnapshotSubject, "partial") ||
+                GroupedOrderBookUpdateResponse.TryHandle(msg, Streams.GroupedOrderBookUpdateSubject, "update") ||
+                GroupedOrderBookSnapshotResponse.TryHandle(msg, Streams.GroupedOrderBookSnapshotSubject, "partial") ||
                 // MarketsUpdateResponse.TryHandle(msg, Streams.MarketsUpdateSubject, "update") ||
                 // MarketsSnapshotResponse.TryHandle(msg, Streams.MarketsSnapshotSubject, "partial") ||
                 MarketsResponse.TryHandle(msg, Streams.MarketsSubject) ||
